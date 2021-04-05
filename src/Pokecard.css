@@ -1,0 +1,22 @@
+.pokecard {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 12px;
+  border: solid black 2px;
+  background-color: lightgray;
+}
+.pokecard-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  justify-content: center;
+}
+
