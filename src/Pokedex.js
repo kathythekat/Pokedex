@@ -2,13 +2,18 @@ import Pokecard from "./Pokecard";
 import './Pokecard.css';
 
 function Pokedex(props) {
+  let winningMessage = props.totalEXP === props.isWinner ? "This hand is the winner!!!" : null
+  console.log(props.totalEXP, "totalExp", props.isWinner);
   return (
-    <div className="pokedex"> 
-      {props.pokemon.map(pokemon => 
-      <div className="pokecard">
-        <Pokecard {...pokemon} />
+    <div> 
+      <div className="pokedex"> 
+        {props.pokemon.map(pokemon => 
+        <div className="pokecard">
+          <Pokecard {...pokemon} />
+        </div>)}
       </div>
-      )}
+      <div className="pokegame-totalEXP">TOTAL EXP: {props.totalEXP}</div>
+      <div className="pokegame-totalEXP">{winningMessage}</div>
     </div>
   );
 }
